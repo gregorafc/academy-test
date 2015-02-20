@@ -1,7 +1,13 @@
 <h3>Pick your city</h3>
 
+<div class="form-inline">
 <%= form_for @user do |f| %>
-  <%= f.label :city_id, 'City' %>
-  <%= f.collection_select :city_id, @cities, :id, city_data %>
-  <%= f.submit 'Pick city' %>
+
+  <div class="form-group">
+    <%= f.label :city_id, 'City' %>
+    <%= f.collection_select :city_id, @cities, :id, city_data, class: "form-control" %>
+  </div>
+
+    <%= f.submit 'Pick city' %>
 <% end %>
+</div>
